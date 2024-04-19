@@ -1,0 +1,37 @@
+#TopBar {
+  display: flex;
+  width: 100%;
+  height: 125px;
+  margin: 0px auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  background: $BGColor2;
+}
+#TopBar .LogoTitle {
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0px;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 900px) {
+  #TopBar {
+    height: 80px;
+    padding: 0px 15px;
+  }
+  #TopBar .LogoTitle {
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 700px) {
+  #TopBar {
+    height: 80px;
+    padding: 0px 15px;
+  }
+  #TopBar .LogoTitle {
+    font-size: 17px;
+    line-height: 17px;
+  }
+}

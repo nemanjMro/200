@@ -1,0 +1,130 @@
+{
+  "data": {
+    "id": 2,
+    "attributes": {
+      "createdAt": "2024-04-17T11:59:15.255Z",
+      "updatedAt": "2024-04-17T12:04:49.181Z",
+      "publishedAt": null,
+      "colors": {
+        "BGColor1": "#12203A",
+        "BGColor2": "#07162F",
+        "BGColor3": "#102d60",
+        "BGColor4": "rgba(241, 158, 16, 0)",
+        "PrimaryColor": "#F19D10",
+        "C_White": "#ffffff"
+      },
+      "pageGame": [
+        {
+          "id": 1,
+          "rating": "5.0",
+          "game-name": "Mermaid Royale Slot",
+          "iframe-link": "https://www.mycasinoaccounts.com/support/clients/html/GameMarketing/MermaidRoyale/presstoplay.html",
+          "play-button-link": "https://mrocasino.com/",
+          "relevant-content": [
+            "Paragraph 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper ut eros ut lacinia. In vitae dolor pretium lorem mollis suscipit.",
+            "Paragraph 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper ut eros ut lacinia. In vitae dolor pretium lorem mollis suscipit.",
+            "Paragraph 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper ut eros ut lacinia. In vitae dolor pretium lorem mollis suscipit."
+          ],
+          "ratings-title": "Mermaid Royal Slot Ratings",
+          "ratings": [
+            {
+              "icon": "icon-1.svg",
+              "title": "Themes",
+              "subtitle": "Adventure, Fanta"
+            },
+            {
+              "icon": "icon-2.svg",
+              "title": "Release Date",
+              "subtitle": "May 12, 2022"
+            },
+            {
+              "icon": "icon-3.svg",
+              "title": "Mobile",
+              "subtitle": "Yes"
+            },
+            {
+              "icon": "icon-4.svg",
+              "title": "Reels",
+              "subtitle": "etSoft"
+            },
+            {
+              "icon": "icon-5.svg",
+              "title": "Paylines",
+              "subtitle": "20"
+            },
+            {
+              "icon": "icon-6.svg",
+              "title": "RTP",
+              "subtitle": "5.12%"
+            },
+            {
+              "icon": "icon-7.svg",
+              "title": "Volatility",
+              "subtitle": "High"
+            },
+            {
+              "icon": "icon-8.svg",
+              "title": "Free Spins",
+              "subtitle": "Yes"
+            },
+            {
+              "icon": "icon-9.svg",
+              "title": "Bonus Round",
+              "subtitle": "Yes"
+            },
+            {
+              "icon": "icon-10.svg",
+              "title": "Wild",
+              "subtitle": "Yes"
+            },
+            {
+              "icon": "icon-11.svg",
+              "title": "Scatter Symbol",
+              "subtitle": "Yes"
+            },
+            {
+              "icon": "icon-12.svg",
+              "title": "Multiplier",
+              "subtitle": "Yes"
+            },
+            {
+              "icon": "icon-13.svg",
+              "title": "Jackpot",
+              "subtitle": "654645165"
+            },
+            {
+              "icon": "icon-14.svg",
+              "title": "Progressive",
+              "subtitle": "No"
+            },
+            {
+              "icon": "icon-15.svg",
+              "title": "Max Win Per Line",
+              "subtitle": "0x"
+            },
+            {
+              "icon": "icon-16.svg",
+              "title": "Bonus Features",
+              "subtitle": "Free Spins, Destc"
+            }
+          ],
+          "faq": [
+            {
+              "question": "Question 0?",
+              "answer": "Answer 0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper ut eros ut lacinia. In vitae dolor pretium lorem mollis suscipit."
+            },
+            {
+              "question": "Question 1?",
+              "answer": "Answer 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper ut eros ut lacinia. In vitae dolor pretium lorem mollis suscipit."
+            },
+            {
+              "question": "Question 2?",
+              "answer": "Answer 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper ut eros ut lacinia. In vitae dolor pretium lorem mollis suscipit."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meta": {}
+}
