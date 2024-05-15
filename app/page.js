@@ -42,7 +42,7 @@ import { Categories } from "@/components/Categories";
 import { Brands } from "@/components/Brands";
 import Bonuses from "@/components/Bonuses";
 import Footer from "@/components/Footer";
-import { fetchData } from "@/components/FetchData";
+// import { fetchData } from "@/components/FetchData";
 
 // async function fetchData() {
 //   const options = {
@@ -76,8 +76,9 @@ export default async function Home() {
   const data = await response.json();
   // console.log(" data ", data);
   // fetch landing text
-  const textResponse = await fetchData();
-  const text = await textResponse;
+  // zakomentarisano zbog builda na Vercel nije povezxano sa strapijem
+  // const textResponse = await fetchData();
+  // const text = await textResponse;
 
   // } catch (error) {
   //   console.error("Error fetching games:", error);
@@ -86,7 +87,8 @@ export default async function Home() {
   return (
     // <main className="bg-black flex flex-col justify-center items-center space-y-8 h-screen">
     <div className=" flex flex-col items-center justify-center w-full h-auto bg-[#131419] md:px-0 px-2  pb-80">
-      <LandingPage text={text} />
+      {/* <LandingPage text={text} /> */}
+      <LandingPage />
       <GameList data={data} />
       <About />
       <Categories />

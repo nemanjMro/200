@@ -1,6 +1,6 @@
 import AllGames from "@/components/AllGames";
 import LandingGamesPage from "@/components/LandingGamesPage";
-import { fetchData } from "@/components/FetchData";
+// import { fetchData } from "@/components/FetchData";
 import { GameListAllGames } from "@/components/GameListAllGames";
 
 // export async function getStaticProps() {
@@ -25,11 +25,13 @@ const data = await response.json();
 
 export default async function Games(props) {
   // fetch landing text
-  const textResponse = await fetchData();
-  const text = await textResponse;
+  // const textResponse = await fetchData();
+  const text = "deploy na vercel";
+  // const text = await textResponse;
 
   return (
     <div className=" flex flex-col items-center justify-center w-full h-auto bg-[#131419] md:px-0 px-2  pb-80">
+      {/* <LandingGamesPage text={text} /> */}
       <LandingGamesPage text={text} />
       <GameListAllGames data={data} />
 
