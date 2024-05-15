@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import { getAllPosts } from "@/services/post";
 import { useSession } from "next-auth/react";
 
-const PostList = ({ blogs }) => {
+// const PostList = ({ blogs }) => {
+const PostList = () => {
   // console.log("DATA", blogs.data.attributes);
 
   // ovde sam sta. treba da prodjem krosz podatke i da iih ispisem dole data undefined trenutno
