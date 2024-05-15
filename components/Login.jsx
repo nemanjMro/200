@@ -1,65 +1,51 @@
 "use client";
-import React, { useState } from "react";
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { useSession, signIn, signOut } from "next-auth/react";
+import Link from "next/link";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleLogin = () => {
-    console.log("Iniciar sesión con:", username, password);
-  };
-
-  const ClickBtn_Singunp = (thisGame) => {
-    console.log("OPEN SIGNUP");
-    alert("OPEN SIGNUP");
-  };
-  const ClickBtn_Login = (thisGame) => {
-    console.log("OPEN LOGIN");
-    alert("OPEN LOGIN");
-  };
+  const { data: session } = useSession();
 
   return (
-    <div id="Login">
-      <button
-        disabled={true}
-        type="button"
-        className="Transitions Btn_Singup"
-        onClick={() => ClickBtn_Singunp()}
-      >
-        SINGUP
-      </button>
-      <button
-        disabled={true}
-        type="button"
-        className="Transitions Btn_Login"
-        onClick={() => ClickBtn_Login()}
-      >
-        LOGIN
-      </button>
-      {/* <h2>Iniciar Sesión</h2>
-      <form>
-        <label>
-          Usuario:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Contraseña:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="button" onClick={handleLogin}>
-          Iniciar Sesión
-        </button>
-      </form> */}
+    <div id="Login" className="flex">
+      <div className="animeButton">
+        <div className="pr-2">
+          {/* Dugme za prijavu ili odjavu, zavisno od stanja sesije */}
+          {!session ? (
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              onClick={() => signIn()}
+            >
+              <Link className="text-gray-900" href="/login">
+                Sign In
+              </Link>
+            </Button>
+          ) : (
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              onClick={() => signOut()}
+            >
+              <Link className="text-gray-900" href="/">
+                Sign Out
+              </Link>
+            </Button>
+          )}
+        </div>
+      </div>
+      {/* <div>
+        {" "}
+        <Button asChild variant="outline" size="sm" onClick={() => signOut()}>
+          <Link className="text-gray-900" href="/">
+            Sign Out
+          </Link>
+        </Button>
+      </div> */}
     </div>
   );
 };
