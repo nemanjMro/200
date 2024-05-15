@@ -21,12 +21,14 @@ import profilePic from "@/public/spin-logic-cash-bandit-slot-game.png";
 // <div class="xl:block">...</div>
 
 const LandingPage = ({ text }) => {
-  const landingText = text?.data?.attributes?.landingText;
+  // const landingText = text?.data?.attributes?.landingText;
   // const parts = landingText.split("^");
-  const parts = landingText ? landingText.split("^") : [];
-  const offerText = text?.data?.attributes?.offerText;
+  // const offerText = text?.data?.attributes?.offerText;
 
   const mainText = text?.data?.attributes?.mainText;
+  const parts = "Deploy na Vercel";
+  const offerText =
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit quam eaque harum, delectus quod quia odit quis corrupti earum dolorem itaque culpa ipsam labore eligendi. Culpa quis quod veniam quibusdam sed voluptas velit odit dolor perferendis quae optio voluptate odio quaerat fugiat placeat qui, cupiditate tempore est quisquam numquam consectetur.";
 
   return (
     <div className=" w-full  h-[775px] relative flex flex-col justify-start md:justify-center items-center">
