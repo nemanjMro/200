@@ -18,6 +18,7 @@ export const GameList = ({ data }) => {
     <>
       <div className=" flex flex-col items-center max-w-6xl w-6xl h-auto rounded-2xl bg-[rgb(9,5,55)] p-10">
         <div className=" w-full md:w-3/5 pb-10  grid grid-cols-3 gap-3">
+          {/* ponekad se pojavi greska koa ukazuje na Buuton => TypeError: Cannot read properties of null (reading 'useState')  istraziti*/}
           <Button
             asChild
             size="lg"

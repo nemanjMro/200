@@ -16,7 +16,7 @@ export function GoogleSignInButton() {
 
   const handleClick = () => {
     signIn("google");
-    window.location.href = callbackUrl || "/";
+    // window.location.href = callbackUrl || "/";
   };
 
   return (
@@ -29,7 +29,7 @@ export function GoogleSignInButton() {
         alt="Google"
         className="h-[18px] w-[18px] "
       />
-      Continue with Google
+      Continue with GoOOOogle
     </button>
   );
 }
@@ -46,7 +46,7 @@ export function FacebookSignInButton() {
     >
       <img
         src="https://www.svgrepo.com/show/475647/facebook-color.svg"
-        alt="Google"
+        alt="Facebook sign in button"
         className="h-[18px] w-[18px] "
       />
       Continue with Facebook

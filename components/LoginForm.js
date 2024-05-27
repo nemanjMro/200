@@ -1,6 +1,6 @@
 "use client";
 
-// import { GoogleSignInButton, FacebookSignInButton } from "./authButtons";
+import { GoogleSignInButton, FacebookSignInButton } from "./authButtons";
 import { CredentialsForm } from "./CredentialsForm";
 import Link from "next/link";
 // import { useSession } from "next-auth/react";
@@ -54,8 +54,8 @@ const LoginForm = () => {
             </div>
 
             <div className="mt-7 flex flex-col gap-2">
-              {/* <GoogleSignInButton />
-              <FacebookSignInButton /> */}
+              <GoogleSignInButton />
+              <FacebookSignInButton />
             </div>
 
             <div className="flex w-full items-center gap-2 py-6 text-sm text-slate-600">

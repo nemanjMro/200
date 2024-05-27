@@ -21,12 +21,13 @@ import profilePic from "@/public/spin-logic-free-slot-games.png";
 // <div class="xl:block">...</div>
 
 const LandingPage = ({ text }) => {
-  const landingText = text?.data?.attributes?.landingText;
+  //zakomentarisno zbog vercel deploya
+  // const landingText = text?.data?.attributes?.landingText;
   // const parts = landingText.split("^");
-  const parts = landingText ? landingText.split("^") : [];
-  const offerText = text?.data?.attributes?.offerText;
+  // const parts = landingText ? landingText.split("^") : [];
+  const offerText = text;
 
-  const mainText = text?.data?.attributes?.mainText;
+  // const mainText = text?.data?.attributes?.mainText;
 
   return (
     <div className=" w-full h-[775px] relative flex flex-col justify-start md:justify-center items-center">
@@ -41,16 +42,16 @@ const LandingPage = ({ text }) => {
         alt="Free casino slot games spin logic slots"
       />
       <div className=" w-full h-auto z-10 flex items-center justify-between flex-col">
-        {parts.map((part, index) => (
+        <h1>{offerText}</h1>
+        {/* {parts.map((part, index) => (
           <h1
             className="text-4xl md:text-4xl lg:text-5xl overflow-hidden  text-center font-bold text-white p-2"
             key={index}
           >
             {part}
             {index !== parts.length - 1 && <br />}{" "}
-            {/* Dodajemo <br /> između delova osim za poslednji deo */}
           </h1>
-        ))}
+        ))} */}
 
         <p className="text-xl md:text-2xl overflow-hidden font-normal text-white text-center py-10 md:py-14 lg:py-24 w-3/4 md:w-2/4">
           {offerText}

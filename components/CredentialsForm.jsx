@@ -89,6 +89,7 @@ export const CredentialsForm = () => {
         Email address
       </label>
       <input
+        id="email"
         name="email"
         type="email"
         autoComplete="email"
@@ -102,6 +103,7 @@ export const CredentialsForm = () => {
         Password
       </label>
       <input
+        id="password"
         name="password"
         type="password"
         autoComplete="current-password"
