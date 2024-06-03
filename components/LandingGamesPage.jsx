@@ -1,9 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
-import profilePic from "@/public/spin-logic-free-slot-games.png";
+import profileGamePic from "@/public/spin-logic-free-slot-games.png";
+// import profilePic from "@/public/spin-logic-cash-bandit-slot-game.png";
 
 // <!-- Extra small (mobilni telefoni) -->
 // <div class="sm:hidden">...</div>
@@ -20,20 +19,19 @@ import profilePic from "@/public/spin-logic-free-slot-games.png";
 // <!-- Extra large (veoma veliki desktopi: 1280px and up) -->    1280 px xl
 // <div class="xl:block">...</div>
 
-const LandingPage = ({ text }) => {
-  //zakomentarisno zbog vercel deploya
-  // const landingText = text?.data?.attributes?.landingText;
+const LandingGamesPage = ({ text }) => {
+  const landingText = text?.landingText;
   // const parts = landingText.split("^");
-  // const parts = landingText ? landingText.split("^") : [];
-  const offerText = text;
+  const parts = landingText ? landingText.split("^") : [];
+  const offerText = text?.offerText;
 
   // const mainText = text?.data?.attributes?.mainText;
 
   return (
     <div className=" w-full h-[775px] relative flex flex-col justify-start md:justify-center items-center">
       <Image
-        src={profilePic}
-        layout="fill"
+        src={profileGamePic}
+        // layout="fill"
         // objectFit="cover" // ovom vrednoscu se ne prikazuje dobr na malom ekranu ali izgleda da je pomerilo prokazivanje texta
         // objectFit="fill"
         placeholder="blur"
@@ -42,8 +40,8 @@ const LandingPage = ({ text }) => {
         alt="Free casino slot games spin logic slots"
       />
       <div className=" w-full h-auto z-10 flex items-center justify-between flex-col">
-        <h1>{offerText}</h1>
-        {/* {parts.map((part, index) => (
+        {/* <h1>{offerText}</h1> */}
+        {parts.map((part, index) => (
           <h1
             className="text-4xl md:text-4xl lg:text-5xl overflow-hidden  text-center font-bold text-white p-2"
             key={index}
@@ -51,7 +49,7 @@ const LandingPage = ({ text }) => {
             {part}
             {index !== parts.length - 1 && <br />}{" "}
           </h1>
-        ))} */}
+        ))}
 
         <p className="text-xl md:text-2xl overflow-hidden font-normal text-white text-center py-10 md:py-14 lg:py-24 w-3/4 md:w-2/4">
           {offerText}
@@ -72,4 +70,4 @@ const LandingPage = ({ text }) => {
   );
 };
 
-export default LandingPage;
+export default LandingGamesPage;

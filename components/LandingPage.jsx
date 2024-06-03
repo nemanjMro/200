@@ -21,14 +21,14 @@ import profilePic from "@/public/spin-logic-cash-bandit-slot-game.png";
 // <div class="xl:block">...</div>
 
 const LandingPage = ({ text }) => {
-  // const landingText = text?.data?.attributes?.landingText;
-  // const parts = landingText.split("^");
-  // const offerText = text?.data?.attributes?.offerText;
+  const landingText = text?.landingText;
+  const parts = landingText ? landingText.split("^") : [];
+  const offerText = text?.offerText;
 
-  const mainText = text?.data?.attributes?.mainText;
-  const parts = "Deploy na Vercel";
-  const offerText =
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit quam eaque harum, delectus quod quia odit quis corrupti earum dolorem itaque culpa ipsam labore eligendi. Culpa quis quod veniam quibusdam sed voluptas velit odit dolor perferendis quae optio voluptate odio quaerat fugiat placeat qui, cupiditate tempore est quisquam numquam consectetur.";
+  // const mainText = text?.data?.attributes?.mainText;
+  // const parts = "Deploy na Vercel";
+  // const offerText =
+  //   "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit quam eaque harum, delectus quod quia odit quis corrupti earum dolorem itaque culpa ipsam labore eligendi. Culpa quis quod veniam quibusdam sed voluptas velit odit dolor perferendis quae optio voluptate odio quaerat fugiat placeat qui, cupiditate tempore est quisquam numquam consectetur.";
 
   return (
     <div className=" w-full  h-[775px] relative flex flex-col justify-start md:justify-center items-center">
@@ -43,11 +43,9 @@ const LandingPage = ({ text }) => {
         priority={true}
         quality={100}
         alt="Free casino slot games spin logic slots"
-        // className=" w-full"
       />
       <div className=" w-full h-auto z-10 flex items-center justify-between flex-col">
-        <h1>{parts}</h1>
-        {/* {parts.map((part, index) => (
+        {parts.map((part, index) => (
           <h1
             className="text-4xl md:text-4xl lg:text-5xl overflow-hidden  text-center font-bold text-white p-2"
             key={index}
@@ -55,7 +53,7 @@ const LandingPage = ({ text }) => {
             {part}
             {index !== parts.length - 1 && <br />}{" "}
           </h1>
-        ))} */}
+        ))}
 
         <p className="text-xl md:text-2xl overflow-hidden font-normal text-white text-center py-10 md:py-14 lg:py-24 w-3/4 md:w-2/4">
           {offerText}

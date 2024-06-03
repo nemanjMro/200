@@ -1,9 +1,9 @@
 import React from "react";
 import { Category } from "./Category";
 
-const imgUrl1 = "/free-slots-RTS-advanture-game.jpg";
-const imgUrl2 = "/free-slots-spin-logic-game.jpg";
-const imgUrl3 = "/free-slots-progressive-game.jpg";
+const imgUrl1 = "@/free-slots-RTS-advanture-game.jpg";
+const imgUrl2 = "@/free-slots-spin-logic-game.jpg";
+const imgUrl3 = "@/free-slots-progressive-game.jpg";
 
 export const Categories = () => {
   return (
