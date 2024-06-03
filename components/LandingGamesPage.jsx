@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import profileGamePic from "@/public/spin-logic-free-slot-games.png";
+import profileGamePic from "/public/spin-logic-free-slot-games.png";
 // import profilePic from "@/public/spin-logic-cash-bandit-slot-game.png";
 
 // <!-- Extra small (mobilni telefoni) -->
@@ -28,8 +28,11 @@ const LandingGamesPage = ({ text }) => {
   // const mainText = text?.data?.attributes?.mainText;
 
   return (
-    <div className=" w-full h-[775px] relative flex flex-col justify-start md:justify-center items-center">
-      <Image
+    <div
+      className="bg-[url('/spin-logic-free-slot-games.png')] bg-cover bg-center w-full h-[775px] relative flex flex-col justify-start md:justify-center items-center"
+      // style={{ "background-img": profileGamePic }}
+    >
+      {/* <Image
         src={profileGamePic}
         // layout="fill"
         // objectFit="cover" // ovom vrednoscu se ne prikazuje dobr na malom ekranu ali izgleda da je pomerilo prokazivanje texta
@@ -38,7 +41,7 @@ const LandingGamesPage = ({ text }) => {
         priority={true}
         quality={100}
         alt="Free casino slot games spin logic slots"
-      />
+      /> */}
       <div className=" w-full h-auto z-10 flex items-center justify-between flex-col">
         {/* <h1>{offerText}</h1> */}
         {parts.map((part, index) => (

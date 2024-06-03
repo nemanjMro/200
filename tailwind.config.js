@@ -84,6 +84,10 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "open-menu": "open-menu 0.5s ease-in-out forwards",
       },
+      // backgroundImage: {
+      //   landingPage: "url('/public/spin-logic-cash-bandit-slot-game.png')",
+      //   gamesPage: "url('/public/spin-logic-free-slot-games.png')",
+      // },
     },
   },
   plugins: [require("tailwindcss-animate")],

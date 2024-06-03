@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-import profilePic from "@/public/spin-logic-cash-bandit-slot-game.png";
+// import profilePic from "@/public/spin-logic-cash-bandit-slot-game.png";
 
 // <!-- Extra small (mobilni telefoni) -->
 // <div class="sm:hidden">...</div>
@@ -29,10 +29,9 @@ const LandingPage = ({ text }) => {
   // const parts = "Deploy na Vercel";
   // const offerText =
   //   "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit quam eaque harum, delectus quod quia odit quis corrupti earum dolorem itaque culpa ipsam labore eligendi. Culpa quis quod veniam quibusdam sed voluptas velit odit dolor perferendis quae optio voluptate odio quaerat fugiat placeat qui, cupiditate tempore est quisquam numquam consectetur.";
-
   return (
-    <div className=" w-full  h-[775px] relative flex flex-col justify-start md:justify-center items-center">
-      <Image
+    <div className=" bg-[url('/spin-logic-cash-bandit-slot-game.png')] bg-cover bg-center w-full  h-[775px] relative flex flex-col justify-start md:justify-center items-center">
+      {/* <Image
         src={profilePic}
         layout="fill"
         // objectFit="cover" // ovom vrednoscu se ne prikazuje dobr na malom ekranu ali izgleda da je pomerilo prokazivanje texta
@@ -43,7 +42,7 @@ const LandingPage = ({ text }) => {
         priority={true}
         quality={100}
         alt="Free casino slot games spin logic slots"
-      />
+      /> */}
       <div className=" w-full h-auto z-10 flex items-center justify-between flex-col">
         {parts.map((part, index) => (
           <h1
