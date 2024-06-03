@@ -21,12 +21,12 @@ export default function RootLayout({ children }) {
     <html lang="en" className=" text-white">
       <body className={`${poppins.variable} font-sans text-white bg-[#131419]`}>
         <AuthProvider>
-          <nav className="flex flex-col items-center h-20">
+          <nav className="flex flex-col items-center h-20 fixed left-0 top-0 z-20 w-full">
             <div className="w-full h-full">
               <TopBar />
             </div>
           </nav>
-          <div className="flex items-center justify-center w-full  bg-[#131419]">
+          <div className="flex items-center justify-center w-full  bg-[#131419] mt-20">
             {children}
           </div>
         </AuthProvider>
