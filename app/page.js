@@ -70,10 +70,10 @@ import Footer from "@/components/Footer";
 // import TopBar from "@/components/TopBar";
 export default async function Home() {
   // try {
-  const response = await fetch(
-    "https://api.eternalslots.com/game/get-active-games"
-  );
-  const data = await response.json();
+  // const response = await fetch(
+  //   "https://api.eternalslots.com/game/get-active-games" zakomentarisano zbog proxy problema sa dohvatanjerm podataka preko apija
+  // );
+  // const data = await response.json();
   // console.log(" data ", data);
   // fetch landing text
   // zakomentarisano zbog builda na Vercel nije povezxano sa strapijem
@@ -89,7 +89,7 @@ export default async function Home() {
     <div className=" flex flex-col items-center justify-center w-full h-auto bg-[#131419] md:px-0 px-2  pb-80">
       {/* <LandingPage text={text} /> */}
       <LandingPage />
-      <GameList data={data} />
+      {/* <GameList data={data} /> zakomentarisano zbog proxy problema sa dohvatanjerm podataka preko apija */}
       <About />
       <Categories />
       <Brands />

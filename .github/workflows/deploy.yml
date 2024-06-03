@@ -1,0 +1,35 @@
+name: Deploy Next.js to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20" # Ili verzija koju koristi vaša aplikacija
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js app
+        run: npm run build
+
+      - name: Deploy to cPanel via SSH
+        env:
+          SSH_KEY: ${{ secrets.CPANEL_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -o StrictHostKeyChecking=no spinlogicbonus@s5.webhostingsrbija.rs 'rm -rf /home/spinlogicbonus/spinlogicslots.com/*'
+          scp -r ./.next/* spinlogicbonus@s5.webhostingsrbija.rs:/home/spinlogicbonus/spinlogicslots.com/

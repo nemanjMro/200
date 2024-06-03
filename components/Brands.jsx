@@ -5,8 +5,8 @@ import Image from "next/image";
 const Mro = "/MrO-free-casino-slot-games.jpg";
 const Eternal = "/Eternal-slots-free-casoni-games.jpg";
 
-const imgUrl1 = "/free-slots-RTS-advanture-game.jpg";
-const imgUrl2 = "/free-slots-spin-logic-game.jpg";
+// const imgUrl1 = "/free-slots-RTS-advanture-game.jpg";
+// const imgUrl2 = "/free-slots-spin-logic-game.jpg";
 
 export const Brands = () => {
   return (

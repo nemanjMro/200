@@ -94,7 +94,7 @@ const authHandler = NextAuth({
       return baseUrl;
     },
   },
-  debug: true,
+  debug: false,
   cookies: {
     state: {
       name: `next-auth.state-token`,
