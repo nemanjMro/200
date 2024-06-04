@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 // import { useState } from "react";
 // import { useRouter } from "next/navigation";
 // import { registerUser } from "@/services/auth";
@@ -91,14 +91,18 @@
 
 //-----------------------------------------------------
 
-"use client";
+// "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { registerUser } from "@/services/auth";
+// import { useSearchParams } from 'next/navigation'
 import Link from "next/link";
 
 const RegistrationForm = () => {
   const router = useRouter();
+  // const searchParams = useSearchParams()
+  // const params = new URLSearchParams(searchParams.toString())
+  // const params ='verification'
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -115,9 +119,9 @@ const RegistrationForm = () => {
     e.preventDefault();
     registerUser(email, password)
       .then((res) => {
-        if (res.status === 201) {
+        if (!res.result.code) {
           clearInputs();
-          router.push("/login");
+          router.push("/verification")
         } else {
           setError(res.message);
         }

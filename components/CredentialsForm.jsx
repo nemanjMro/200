@@ -35,24 +35,24 @@
 //       .catch((e) => console.error(e));
 //   };
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { signIn } from "next-auth/react";
-// import { useRouter } from "next/navigation"; //iz nekog razloga push na url ne radi sa rauterom
+import { useRouter } from "next/navigation"; //iz nekog razloga push na url ne radi sa rauterom
 
 export const CredentialsForm = () => {
-  //   const router = useRouter();
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [callbackUrl, setCallbackUrl] = useState("");
+  // const [callbackUrl, setCallbackUrl] = useState("");
 
-  useEffect(() => {
-    const query = new URLSearchParams(window.location.search);
-    const callbackUrlParam = query.get("callbackUrl");
-    if (callbackUrlParam) {
-      setCallbackUrl(callbackUrlParam);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const query = new URLSearchParams(window.location.search);
+  //   const callbackUrlParam = query.get("callbackUrl");
+  //   if (callbackUrlParam) {
+  //     setCallbackUrl(callbackUrlParam);
+  //   }
+  // }, []);
 
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
@@ -74,9 +74,8 @@ export const CredentialsForm = () => {
           setError(JSON.parse(res.error).message);
         } else {
           clearInputs();
-          // Preusmeravanje na callback URL
-          window.location.href = callbackUrl || "/";
-          //   router.push(callbackUrl || "/");
+            router.push("/games");
+            // router.push(callbackUrl || "/games");
           //   router.push(callbackUrl);
         }
       })
@@ -114,12 +113,12 @@ export const CredentialsForm = () => {
         onChange={handlePasswordChange}
       />
       <p className="mb-3 mt-2 text-sm text-gray-500">
-        <a
+        {/* <a
           href="/forgot-password"
           className="text-blue-800 hover:text-blue-600"
         >
           Reset your password?
-        </a>
+        </a> */}
       </p>
       <button
         type="submit"

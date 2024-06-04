@@ -4,7 +4,7 @@ export const registerUser = (email, password) => {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {
-        Accept: "application/json",
+        "Accept": "application/json",
         "Content-Type": "application/json",
       },
     })
@@ -24,7 +24,7 @@ export const verifyEmail = (email, code) => {
       method: "POST",
       body: JSON.stringify({ email, code }),
       headers: {
-        Accept: "application/json",
+        "Accept": "application/json",
         "Content-Type": "application/json",
       },
     })

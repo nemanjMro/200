@@ -40,6 +40,8 @@ export async function POST(request) {
 
     const { password: hashedPasswrod, ...result } = user;
     return NextResponse.json({ result }, { status: 201 });
+    // const url = new URL("/verification", request.nextUrl);
+    // return NextResponse.redirect(url);
   } catch (e) {
     console.error(e);
     return NextResponse.json(

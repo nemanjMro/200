@@ -13,7 +13,7 @@ export const Ratings = () => {
   return (
     <div className="w-full flex flex-col h-auto justify-center items-center">
       <div className=" w-full  md:w-2/5  flex flex-col flow-row bg-blackitems-start justify-start pt-5 pb-5 pl-5 md:pl-0">
-        <h2 className=" text-xl"> ime igrice Ratings</h2>
+        <h2 className=" text-xl">Game Stats</h2>
       </div>
       <form
         onSubmit={handleSubmit}

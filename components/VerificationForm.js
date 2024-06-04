@@ -22,12 +22,11 @@ const VerificationForm = () => {
     e.preventDefault();
     verifyEmail(email, password)
       .then((res) => {
-        console.log("::::::::::::::response", res);
-        if (res.status === 201) {
+        console.log(res)
+        if (res.message === 'Verified') {
           clearInputs();
           router.push("/login");
         } else {
-          console.log("response else::::::::::::", res);
           setError(res.message);
         }
       })
@@ -72,7 +71,7 @@ const VerificationForm = () => {
 
             <div className="text-center">
               <p className="mb-3 text-2xl font-semibold leading-5 text-slate-900">
-                Create an Account
+                Please check your email for the verification code.
               </p>
             </div>
 

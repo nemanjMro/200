@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
       <hr className=" w-full border-[#60606060] mb-10 " />
       <div>
-        <h3>bla bla bla</h3>
+        <h3></h3>
       </div>
     </footer>
   );
