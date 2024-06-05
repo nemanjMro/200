@@ -18,7 +18,7 @@ export const GameListAllGames = ({ data }) => {
   return (
     <>
       <div className=" flex flex-col items-center max-w-6xl w-6xl h-auto rounded-2xl bg-[#131419] p-10">
-        <div className=" w-full md:w-3/5 pb-10  grid grid-cols-3 gap-3">
+        <div className=" w-full md:w-3/5 pb-10  grid grid-cols-3  md:grid-cols-1  gap-3">
           <Button
             asChild
             size="lg"
