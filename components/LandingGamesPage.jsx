@@ -29,19 +29,19 @@ const LandingGamesPage = ({ text }) => {
 
   return (
     <div
-      className="bg-[url('/spin-logic-free-slot-games.png')] bg-cover bg-center w-full h-[775px] relative flex flex-col justify-start md:justify-center items-center"
-      // style={{ "background-img": profileGamePic }}
-    >
-      {/* <Image
+      // className="bg-[url('/spin-logic-free-slot-games.png')] bg-cover bg-center w-full h-[775px] relative flex flex-col justify-start md:justify-center items-center">
+      className="w-full md:h-[775px] h-auto relative flex flex-col justify-start md:justify-center items-center">
+      <Image
         src={profileGamePic}
-        // layout="fill"
+        layout="responsive"
         // objectFit="cover" // ovom vrednoscu se ne prikazuje dobr na malom ekranu ali izgleda da je pomerilo prokazivanje texta
         // objectFit="fill"
         placeholder="blur"
         priority={true}
         quality={100}
+        className=" absolute top-0"
         alt="Free casino slot games spin logic slots"
-      /> */}
+      />
       <div className=" w-full h-auto z-10 flex items-center justify-between flex-col">
         {/* <h1>{offerText}</h1> */}
         {parts.map((part, index) => (
@@ -54,7 +54,7 @@ const LandingGamesPage = ({ text }) => {
           </h1>
         ))}
 
-        <p className="text-xl md:text-2xl overflow-hidden font-normal text-white text-center py-10 md:py-14 lg:py-24 w-3/4 md:w-2/4">
+        <p className="text-xl md:text-2xl overflow-hidden font-normal text-white text-center py-10 md:py-14 lg:py-24 w-4/4 md:w-2/4">
           {offerText}
         </p>
         {/* <div className=" flex justify-center">

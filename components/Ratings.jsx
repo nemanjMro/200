@@ -81,7 +81,8 @@ export const Ratings = () => {
           <Input
             className="bg-[#2b2f49] border border-[#5865F2] rounded-lg h-24"
             value={input}
-            onChange
+            readOnly={true}
+            // onChange // zbog greske koju izbacuje next dodat read only mode dok se ne konfigurise forma i prosledi onChange handler
           />
           <Button className="  mt-10 mb-10">POST COMMENT</Button>
         </div>

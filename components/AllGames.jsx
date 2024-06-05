@@ -6,22 +6,26 @@ export const AllGames = () => {
   const [games, setGames] = useState([]);
   const [visibleGames, setVisibleGames] = useState(20); // Početni broj vidljivih igara
 
+  const data = "../app/data/apiEternalData.json"
   useEffect(() => {
     const fetchGames = async () => {
       try {
         const response = await fetch(
-          "https://api.eternalslots.com/game/get-active-games"
+          //  // promena nacina dohvatanja podataka potrebnih za kreiranje url za igrice
+          // "https://api.eternalslots.com/game/get-active-games"
+          "/public/apiEternalData.json"
         );
         const data = await response.json();
         setGames(data);
+        console.log('datttaa:;', data)
       } catch (error) {
         console.error("Error fetching games:", error);
       }
     };
-
+    
     fetchGames();
   }, []);
-
+  
   const handleShowMore = () => {
     setVisibleGames((prevVisibleGames) => prevVisibleGames + 10); // Dodaj još 2 igre kada se klikne na dugme
   };

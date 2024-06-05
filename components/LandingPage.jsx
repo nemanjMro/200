@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-// import profilePic from "@/public/spin-logic-cash-bandit-slot-game.png";
+import profilePic from "@/public/spin-logic-cash-bandit-slot-game.png";
 
 // <!-- Extra small (mobilni telefoni) -->
 // <div class="sm:hidden">...</div>
@@ -30,10 +30,11 @@ const LandingPage = ({ text }) => {
   // const offerText =
   //   "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit quam eaque harum, delectus quod quia odit quis corrupti earum dolorem itaque culpa ipsam labore eligendi. Culpa quis quod veniam quibusdam sed voluptas velit odit dolor perferendis quae optio voluptate odio quaerat fugiat placeat qui, cupiditate tempore est quisquam numquam consectetur.";
   return (
-    <div className=" bg-[url('/spin-logic-cash-bandit-slot-game.png')] bg-cover bg-center w-full  h-[775px] relative flex flex-col justify-start md:justify-center items-center">
-      {/* <Image
+    // <div className=" bg-[url('/spin-logic-cash-bandit-slot-game.png')] bg-cover bg-center w-full  h-[775px] relative flex flex-col justify-start md:justify-center items-center">
+    <div className=" w-full md:h-[775px] h-auto relative flex flex-col justify-start md:justify-center items-center">
+      <Image
         src={profilePic}
-        layout="fill"
+        layout="responsive"
         // objectFit="cover" // ovom vrednoscu se ne prikazuje dobr na malom ekranu ali izgleda da je pomerilo prokazivanje texta
         // objectFit="fill"
         // width={1280}
@@ -41,8 +42,9 @@ const LandingPage = ({ text }) => {
         placeholder="blur"
         priority={true}
         quality={100}
+        className=" absolute top-0"
         alt="Free casino slot games spin logic slots"
-      /> */}
+      />
       <div className=" w-full h-auto z-10 flex items-center justify-between flex-col">
         {parts.map((part, index) => (
           <h1
@@ -54,10 +56,10 @@ const LandingPage = ({ text }) => {
           </h1>
         ))}
 
-        <p className="text-xl md:text-2xl overflow-hidden font-normal text-white text-center py-10 md:py-14 lg:py-24 w-3/4 md:w-2/4">
+        <p className="text-xl md:text-2xl overflow-hidden font-normal text-white text-center py-10 md:py-14 lg:py-24 w-4/4 md:w-2/4">
           {offerText}
         </p>
-        <div className=" flex justify-center">
+        <div className=" flex justify-center pb-8">
           <Button
             asChild
             size="lg"

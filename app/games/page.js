@@ -1,24 +1,28 @@
-import AllGames from "@/components/AllGames";
+// import AllGames from "@/components/AllGames";
 import LandingGamesPage from "@/components/LandingGamesPage";
 import { GameListAllGames } from "@/components/GameListAllGames";
+import { promises as fs } from 'fs';
 
-const fetchData = async () => {
-  try {
-    const response = await fetch(
-      "https://api.eternalslots.com/game/get-active-games"
-    );
-    const data = await response.json();
-    if (!data) {
-      throw new Error("Failed to fetch data");
-    }
-    return data;
-  } catch (err) {
-    console.error(err);
-    // return <ErrorMessage />;
-  }
-};
-
-const data = await fetchData();
+// const fetchData = async () => {
+  //   try {
+    //     const response = await fetch(
+      //       "https://api.eternalslots.com/game/get-active-games"
+      //     );
+      //     const data = await response.json();
+      //     if (!data) {
+        //       throw new Error("Failed to fetch data");
+        //     }
+        //     return data;
+        //   } catch (err) {
+          //     console.error(err);
+          //     // return <ErrorMessage />;
+          //   }
+          // };
+          
+          // const data = await fetchData();
+// promena nacina dohvatanja podataka potrebnih za kreiranje url za igrice
+const file = await fs.readFile(process.cwd() + '/public/apiEternalData.json', 'utf8');
+const data = JSON.parse(file);
 
 export default async function Games(props) {
   const text = {
