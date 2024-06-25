@@ -29,11 +29,11 @@ export default async function Games(props) {
     // zbog upotrebe cms-a dodata je funkcionalnost da na ovu strelicu (^) recenica bude prelomljena u novi red
     landingText: "Games,^ Games!",
     offerText:
-      "Welcome to Spin Logic Slots! Your go-to hub for top-notch online gambling info, expert ratings, and player reviews. Stay ahead with the latest casino news, including new game releases and exclusive bonuses. Subscribe now for insider access to tips and promotions that you won't find anywhere else. Join us and elevate your online gaming experience today!",
+      "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the ",
   };
 
   return (
-    <div className=" flex flex-col items-center justify-center w-full h-auto bg-[#131419] md:px-0 px-2  pb-80">
+    <div className=" flex flex-col items-center justify-center w-full h-auto bg-[#131419] md:px-0 px-2">
       <LandingGamesPage text={text} />
       <GameListAllGames data={data} />
     </div>

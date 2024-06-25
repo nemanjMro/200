@@ -20,7 +20,7 @@ const Login = () => {
               size="sm"
               onClick={() => signIn()}
             >
-              <Link className="text-gray-900" href="/login">
+              <Link className="bg-primary text-primary-foreground border-none" href="/login">
                 Sign In
               </Link>
             </Button>

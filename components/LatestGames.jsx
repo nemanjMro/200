@@ -42,8 +42,8 @@ export const LatestGames = ({ games }) => {
         <h2 className="text-xl md:text-4xl font-semibold text-center">
           Latest Games
         </h2>
-        <h3 className="text-xs md:text-lg font-medium text-center">
-          Experience the <strong>Best Gaming Affiliates Website.</strong>
+        <h3 className="fontsize-17px md:text-lg font-medium text-center font-medium text-gray2 pt-5">
+          Your next win awaits. Play the latest games now.
         </h3>
         <br />
       </div>

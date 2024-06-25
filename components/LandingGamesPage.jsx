@@ -54,7 +54,7 @@ const LandingGamesPage = ({ text }) => {
           </h1>
         ))}
 
-        <p className="text-xl md:text-2xl overflow-hidden font-normal text-white text-center py-10 md:py-14 lg:py-24 w-4/4 md:w-2/4">
+        <p className="text-xl md:text-base font-normal text-stone-300 text-center py-10 md:py-14 lg:py-12 w-4/4 md:w-2/6">
           {offerText}
         </p>
         {/* <div className=" flex justify-center">

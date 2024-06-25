@@ -71,7 +71,6 @@
   position: relative;
   overflow: hidden;
   /* border-radius: 15px; */
-  border: solid 1px rgba(255, 255, 255, 0.1);
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
@@ -126,4 +125,21 @@
 }
 .animeButton:hover {
   transform: scale(1.2);
+}
+
+/* FAQ padajuci */
+.transform {
+  display: inline-block;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+
+.rotate-0 {
+  transform: rotate(0deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
 }

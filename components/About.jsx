@@ -16,14 +16,14 @@ export const About = () => {
           />
         </Link>
       </div>
-      <h2 className=" text-center text-xl py-6 font-semibold my-6">
+      <h2 className=" text-center text-4xl py-5 font-semibold">
         {" "}
         A Platform for Games
       </h2>
       <p className=" text-center pb-6 md:w-2/3">
-        Dress with crossover V-neckline with ruffled trims.opns Features &
-        longslee sleeves with ruffled trims, elastic cuffs, a cinched waist
-        ruffled hem loreming ipsum dolor amet. Lorem ipsum dolor amet.
+        Stay ahead of the curve with Spin Logic Slots and subscribe for
+        exclusive access to cutting-edge casino insights, bonuses, and
+        strategies to maximize your winnings!
       </p>
       <Button
         asChild

@@ -50,14 +50,26 @@ import slugify from "slugify"; // Uvozimo biblioteku za generisanje slugova
 
 export const Game = ({ games, show }) => {
   const [visibleGames, setVisibleGames] = useState(show); // Početni broj vidljivih igara
+  const shouldHideOnSmallScreen = (index) => { //sakriva na telefonu poslednje 2 igrice
+    return (
+      index >= Math.floor(visibleGames / 3) * 3 &&
+      index < visibleGames &&
+      index % 3 !== 2
+    );
+  };
   return (
     <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 md:gap-3 gap-1">
-      {games?.slice(0, visibleGames).map((game) => {
+      {games?.slice(0, visibleGames).map((game, index) => {
         // Generisanje slug za ime igre
         const slug = slugify(game.displayName, { lower: true });
 
         return (
-          <div key={game.machineId} className="rounded-md">
+          <div
+            key={game.machineId}
+            className={`rounded-md ${
+              shouldHideOnSmallScreen(index) ? "hidden sm:block" : ""
+            }`}
+          >
             <Link href={`/game/${game.machineId}/${slug}`} passHref>
               <div className="item">
                 <Image

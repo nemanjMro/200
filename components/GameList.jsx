@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { useState, useEffect } from "react";
 import { Game } from "./Game";
@@ -23,7 +24,7 @@ export const GameList = ({ data }) => {
             size="lg"
             className=" border-spacing-1 bg-[rgb(9,5,55)] border border-[#5865F2] hover:bg-[#5865F2]"
           >
-            <Link href="/" className=" px-10">
+            <Link href="/games?filter=slots" className=" px-10">
               SLOTS
             </Link>
           </Button>
@@ -32,7 +33,7 @@ export const GameList = ({ data }) => {
             size="lg"
             className=" border-spacing-1 bg-[rgb(9,5,55)] border border-[#5865F2] hover:bg-[#5865F2]"
           >
-            <Link href="/" className=" px-10">
+            <Link href="/games" className=" px-10">
               HOT GAMES
             </Link>
           </Button>
@@ -41,8 +42,8 @@ export const GameList = ({ data }) => {
             size="lg"
             className=" border-spacing-1 bg-[rgb(9,5,55)] border border-[#5865F2] hover:bg-[#5865F2]"
           >
-            <Link href="/" className=" px-10">
-              PROGRESSIVES
+            <Link href="/games" className=" px-10">
+              NEW GAMES
             </Link>
           </Button>
         </div>

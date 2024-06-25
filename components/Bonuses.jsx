@@ -11,8 +11,8 @@ const Bonuses = () => {
       <div className=" max-w-6xl w-full flex flex-row justify-between items-center px-4 my-10">
         <div className="">
           <h2 className=" font-semibold text-4xl text-left mb-2">Bonuses</h2>
-          <h3 className=" font-medium text-sm text-left">
-            At SLS, we show only the best rewards
+          <h3 className=" font-medium fontsize-17px text-left text-gray2">
+          Unlock the best bonuses, where unmatched value and thrilling rewards await at every turn.
           </h3>
         </div>
         <div className="my-6">
