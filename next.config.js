@@ -1,7 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["gmgall.cfcontentdnfls.eu"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "gmgall.cfcontentdnfls.eu",
+        port: "",
+        pathname: "/**",
+      },
+    ]
   },
 };
-
+ 
+console.log(nextConfig);
+ 
+module.exports = nextConfig;
+ 
