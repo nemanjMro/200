@@ -39,8 +39,7 @@ const LandingPage = ({ text }) => {
       <div className="sm:hidden w-full h-2/5">
         <Image
           src={mobileBg}
-          layout="fill"
-          objectFit="cover"
+
           placeholder="blur"
           priority={true}
           quality={100}
@@ -53,8 +52,6 @@ const LandingPage = ({ text }) => {
       <div className="hidden sm:block w-full h-1/5">
         <Image
           src={profilePic}
-          layout="responsive"
-          objectFit="cover"
           placeholder="blur"
           priority={true}
           quality={100}

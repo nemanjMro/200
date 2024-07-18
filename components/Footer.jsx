@@ -5,11 +5,12 @@ import Link from "next/link";
 const mail = "/mail-icon.svg";
 
 const Footer = () => {
+  const year = new Date().getFullYear()
   return (
     <footer className=" text-white w-full h-auto flex flex-col justify-center items-center bg-[#090D14]        ">
       <div className=" max-w-6xl w-full flex flex-col md:flex-row justify-between items-center px-4 my-10">
         <div className="max-w-6xl w-full flex flex-col justify-between self-start items-left px-4 my-10">
-          <h3>ABOUT US</h3>
+          <h3 className="font-bold">ABOUT US</h3>
           <p>
             Introducing &#34;LevelX&#34; a cutting0edge fictive gaming affiliate
             website
@@ -22,7 +23,7 @@ const Footer = () => {
           </p>
         </div>
         <div className=" max-w-6xl w-full flex flex-col justify-between  self-start items-left px-4 my-10">
-          <h3>PUBLISHER</h3>
+          <h3 className="font-bold">PUBLISHER</h3>
           <p>Games</p>
           <p>Bonuses</p>
           <p>About Us</p>
@@ -30,7 +31,7 @@ const Footer = () => {
           <p>Terms and Conditions</p>
         </div>
         <div className=" max-w-6xl w-full flex flex-col justify-between  self-start items-left px-4 my-10">
-          <h3>ABOUT US</h3>
+          <h3 className="font-bold">ABOUT US</h3>
           <p>Slots</p>
           <p>Hot Games</p>
           <p>Table Games</p>
@@ -38,7 +39,7 @@ const Footer = () => {
           <p>Progresive</p>
         </div>
         <div className=" max-w-6xl w-full flex flex-col justify-between  self-start items-left px-4 my-10">
-          <h3>SUBSCRIBE</h3>
+          <h3 className="font-bold">SUBSCRIBE</h3>
           <p>
             Wafer cake gummies jelly-o ice cream. Pastry halvah carrot cake
             gummi bears caramels. Gummies lemon drops cake.
@@ -55,9 +56,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className=" w-full border-[#60606060] mb-10 " />
-      <div>
-        <h3></h3>
+      <hr className="w-full border-[#60606060] " />
+      <div className="flex items-center justify-center py-4">
+        <h3 >© {year}. All rights reserved.</h3>
       </div>
     </footer>
   );

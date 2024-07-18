@@ -38,7 +38,7 @@ export default async function Home() {
 
   return (
     // <main className="bg-black flex flex-col justify-center items-center space-y-8 h-screen">
-    <div className=" flex flex-col items-center justify-center w-full h-auto bg-[#131419] md:px-0 px-2  pb-80">
+    <div className=" flex flex-col items-center justify-center w-full h-auto bg-[#131419] md:px-0 px-2  pb-0 md:pb-80">
       <LandingPage text={text} />
       {/* <LandingPage /> */}
       <GameList data={data} />

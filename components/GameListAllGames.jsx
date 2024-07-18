@@ -1,75 +1,106 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Game } from "./Game";
 import { Button } from "@/components/ui/button";
-// import Link from "next/link";
 import { Search } from "./Search";
 
 export const GameListAllGames = ({ data }) => {
-  const [games, setGames] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filter, setFilter] = useState(null);
+  const [allGames, setAllGames] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const show = 100;
 
-  useEffect(() => {
-    setGames(data);
-  }, [data]);
+  const categories = [
+    { id: "slots", name: "SLOTS" },
+    { id: "hot", name: "HOT GAMES" },
+    { id: "new", name: "NEW GAMES" },
+  ];
 
-  // MachineId hot igrica
-  const hotMachineIds = [
+  const hotGamesMachIds = [
     261, 346, 362, 272, 300, 333, 268, 307, 347, 367, 342, 292, 339, 358, 337,
     232, 348, 181, 341, 271,
   ];
-  // MachineId new igrica
-  const newMachineIds = [
+  const newGamesMachIds = [
     35, 413, 3, 330, 3, 412, 1, 371, 356, 35, 410, 411, 404, 380, 348, 403, 402,
     366, 367,
   ];
-  // GameId table igrica koje treba isključiti kako bi se pokazale samo slots
-  const excludeSlotGameIds = [35, 1, 0, 24, 19 ,2 , 12];
+  const excludedSlotsMachIds = [35, 1, 0, 24, 19, 2, 12];
 
-  const filteredGames = games
-    .filter((game) =>
-      game.displayName.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-    .filter((game) => {
-      if (filter === "hot") {
-        return hotMachineIds.includes(game.machineId);
+  useEffect(() => {
+    const uniqueGames = Array.from(
+      new Set(data.map((game) => `${game.gameId}-${game.machineId}`))
+    ).map((id) =>
+      data.find((game) => `${game.gameId}-${game.machineId}` === id)
+    );
+    setAllGames(uniqueGames);
+  }, [data]);
+
+  const filteredGames = useMemo(() => {
+    let filtered = allGames;
+
+    if (selectedCategory) {
+      switch (selectedCategory) {
+        case "slots":
+          filtered = filtered.filter(
+            (game) => !excludedSlotsMachIds.includes(game.machineId)
+          );
+          break;
+        case "hot":
+          filtered = filtered.filter((game) =>
+            hotGamesMachIds.includes(game.machineId)
+          );
+          break;
+        case "new":
+          filtered = filtered.filter((game) =>
+            newGamesMachIds.includes(game.machineId)
+          );
+          break;
       }
-      if (filter === "new") {
-        return newMachineIds.includes(game.machineId);
-      }
-      if (filter === "slots") {
-        return !excludeSlotGameIds.includes(game.gameId);
-      }
-      return true;
-    });
+    }
+
+    if (searchTerm.trim()) {
+      const lowercaseSearchTerm = searchTerm.toLowerCase().trim();
+      filtered = filtered.filter((game) => {
+        const displayName = game.displayName.toLowerCase();
+        if (displayName.startsWith(lowercaseSearchTerm)) return true;
+        if (displayName.includes(lowercaseSearchTerm)) return true;
+        if (
+          game.description &&
+          game.description.toLowerCase().includes(lowercaseSearchTerm)
+        )
+          return true;
+        return false;
+      });
+    }
+
+    return filtered;
+  }, [allGames, searchTerm, selectedCategory]);
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
+
+  const handleCategorySelect = (categoryId) => {
+    setSelectedCategory(categoryId === selectedCategory ? null : categoryId);
+  };
 
   return (
     <>
-      <div className="flex flex-col items-center max-w-6xl w-6xl h-auto rounded-2xl bg-[#131419] p-10">
+      <div className="flex flex-col items-center w-full md:w-3/5 h-auto rounded-2xl bg-[#131419] p-10">
         <div className="w-full md:w-3/5 pb-10 grid md:grid-cols-3 grid-cols-1 gap-3">
-          <Button
-            size="lg"
-            className="border-spacing-1 bg-[#131419] border border-[#5865F2] hover:bg-[#5865F2]"
-            onClick={() => setFilter("slots")}
-          >
-            SLOTS
-          </Button>
-          <Button
-            size="lg"
-            className="border-spacing-1 bg-[#131419] border border-[#5865F2] hover:bg-[#5865F2]"
-            onClick={() => setFilter("hot")}
-          >
-            HOT GAMES
-          </Button>
-          <Button
-            size="lg"
-            className="border-spacing-1 bg-[#131419] border border-[#5865F2] hover:bg-[#5865F2]"
-            onClick={() => setFilter("new")}
-          >
-            NEW GAMES
-          </Button>
+          {categories.map((category) => (
+            <Button
+              key={category.id}
+              onClick={() => handleCategorySelect(category.id)}
+              className={`border-spacing-1 ${
+                selectedCategory === category.id
+                  ? "bg-[#5865F2]"
+                  : "bg-[#131419]"
+              } border border-[#5865F2] hover:bg-[#5865F2]`}
+            >
+              {category.name}
+            </Button>
+          ))}
         </div>
 
         <div className="flex justify-center items-center flex-col text-white pt-10">
@@ -83,9 +114,11 @@ export const GameListAllGames = ({ data }) => {
           </p>
         </div>
       </div>
-      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Search onSearch={handleSearch} />
 
       <Game games={filteredGames} show={show} />
     </>
   );
 };
+
+export default GameListAllGames;

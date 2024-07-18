@@ -143,3 +143,53 @@
 .rotate-180 {
   transform: rotate(180deg);
 }
+
+.star {
+  cursor: pointer;
+  font-size: 37px;
+  color: transparent;
+  -webkit-text-stroke: 1px #5865f2; /* Dodaje obojeni okvir */
+  -webkit-text-fill-color: transparent; /* Čini tekst providnim */
+  margin: 0 5px;
+}
+
+.star-filled {
+  color: #5865f2;
+  -webkit-text-stroke: 1px #5865f2; /* Obojeni okvir */
+  -webkit-text-fill-color: #5865f2; /* Popunjava boju */
+}
+
+@media (max-width: 768px) {
+  .star {
+    font-size: 28px;
+  }
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: #131825;
+  border-radius: 0px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #5865F2;
+}
+body::scrollbar {
+  width: 10px;
+  border-radius: 100px;
+}
+body::scrollbar-track {
+  background: #5865F2;
+  border-radius: 100px;
+}
+body::scrollbar-thumb {
+  border-radius: 100px;
+  background: #131825;
+}
+body {
+  scrollbar-face-color: #5865F2;
+  scrollbar-shadow-color: #5865F2;
+  scrollbar-arrow-color: #ffffff;
+  scrollbar-track-color: #131825;
+}

@@ -42,7 +42,7 @@ export const LatestGames = ({ games }) => {
         <h2 className="text-xl md:text-4xl font-semibold text-center">
           Latest Games
         </h2>
-        <h3 className="fontsize-17px md:text-lg font-medium text-center font-medium text-gray2 pt-5">
+        <h3 className="fontsize-17px md:text-lg font-medium text-center text-gray2 pt-5">
           Your next win awaits. Play the latest games now.
         </h3>
         <br />
@@ -71,7 +71,6 @@ export const LatestGames = ({ games }) => {
                     src={game.gameImageUrl}
                     alt={game.displayName}
                     className="rounded-md"
-                    objectFit="cover"
                     width={140}
                     height={185}
                   />
@@ -82,7 +81,7 @@ export const LatestGames = ({ games }) => {
                     className=" -translate-y-6 hover:bg-white hover:text-secondary-foreground"
                   >
                     <Link
-                      href={`/game/${game.machineId}/${slugify(
+                      href={`/${slugify(
                         game.displayName,
                         {
                           lower: true,

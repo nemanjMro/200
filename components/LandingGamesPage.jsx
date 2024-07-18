@@ -33,7 +33,6 @@ const LandingGamesPage = ({ text }) => {
       className="w-full md:h-[775px] h-auto relative flex flex-col justify-start md:justify-center items-center">
       <Image
         src={profileGamePic}
-        layout="responsive"
         // objectFit="cover" // ovom vrednoscu se ne prikazuje dobr na malom ekranu ali izgleda da je pomerilo prokazivanje texta
         // objectFit="fill"
         placeholder="blur"

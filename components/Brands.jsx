@@ -24,7 +24,6 @@ export const Brands = () => {
             src={Mro}
             width={400}
             height={400}
-            objectFit="cover"
             alt="Free casino slots games"
           />
           <div className="flex flex-col justify-center items-center mb-5">
@@ -54,7 +53,6 @@ export const Brands = () => {
             src={Eternal}
             width={400}
             height={400}
-            objectFit="cover"
             alt="Free casino slots games"
           />
           <div className="flex flex-col justify-center items-center mb-5">
