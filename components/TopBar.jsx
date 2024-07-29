@@ -29,10 +29,10 @@ const TopBar = () => {
   return (
     <header
       id="TopBar"
-      className="flex max-w-full h-full mx-auto my-0 justify-between items-center bg-[#131825] px-5"
+      className="flex max-w-full h-full mx-auto my-0 justify-between items-center bg-[#FFFFFF] px-5"
     >
       <section className="flex w-full items-center md:justify-center lg:justify-center justify-end ">
-        <div className=" md:w-1/3 w-full">
+        <div className=" md:w-1/6 w-full">
           <Link href="/">
             <Image
               src="/logo.svg"
@@ -42,40 +42,60 @@ const TopBar = () => {
             />
           </Link>
         </div>
-        <div className="test md:justify-center justify-end items-center md:w-2/3">
+        <div className="test md:justify-center justify-between items-center w-full">
           <button
             id="hamburger-button"
-            className="text-5xl md:hidden text-white cursor-pointer"
+            className="text-5xl md:hidden cursor-pointer"
           >
             &#9776;
           </button>
           <nav
-            className="hidden lg:flex md:flex space-x-8 text-xl w-full"
+            className="hidden lg:flex md:flex space-x-8 text-xl justify-around"
             aria-label="main"
           >
-            <div className="flex justify-evenly w-1/2">
+            <div className="flex justify-evenly w-4/6">
               <Link href="/#Bonuses" className=" text-white">
                 <span className="transition-colors hover:text-[#5865F2]">
-                  Bonuses
+                  About Us
                 </span>
               </Link>
               <Link href="/games" className="hover:opacity-90 text-white">
                 <span className="transition-colors hover:text-[#5865F2]">
-                  Games
+                  Casinos
                 </span>
               </Link>
               {/* <Link href="/blog" className="hover:opacity-90 text-white"> */}
               <Link href="/posts" className="hover:opacity-90 text-white">
                 <span className="transition-colors hover:text-[#5865F2]">
-                  Blog
+                  Bonuses
+                </span>
+              </Link>
+              <Link href="/posts" className="hover:opacity-90 text-white">
+                <span className="transition-colors hover:text-[#5865F2]">
+                  Games
+                </span>
+              </Link>
+              <Link href="/posts" className="hover:opacity-90 text-white">
+                <span className="transition-colors hover:text-[#5865F2]">
+                  News
+                </span>
+              </Link>
+              <Link href="/posts" className="hover:opacity-90 text-white">
+                <span className="transition-colors hover:text-[#5865F2]">
+                  Guides & Tips
+                </span>
+              </Link>
+              <Link href="/posts" className="hover:opacity-90 text-white">
+                <span className="transition-colors hover:text-[#5865F2]">
+                  Payments Methods
                 </span>
               </Link>
             </div>
-            <div className="flex justify-end w-1/2">
-              <Login />
-            </div>
           </nav>
         </div>
+        <div className="flex justify-end w-1/6">
+            <Login />
+          </div>
       </section>
       <section
         id="mobile-menu"

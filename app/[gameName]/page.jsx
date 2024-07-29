@@ -111,7 +111,7 @@ export default async function GameDetails({ params }) {
               <Button
                 key={index}
                 variant="outline"
-                className="md:w-[130px] w-1/2 p-4 bg-[#131419] border border-[#5865F2] hover:bg-[#5865F2]"
+                className="md:w-[130px] w-1/2 p-4 bg-[#FBF2FF] border border-[#5865F2] hover:bg-[#5865F2]"
               >
                 {buttonText}
               </Button>

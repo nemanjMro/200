@@ -61,7 +61,6 @@
     /* @apply landingPageColor text-foreground; */
   }
 }
-
 .item {
   display: block;
   margin: 0;
@@ -192,4 +191,37 @@ body {
   scrollbar-shadow-color: #5865F2;
   scrollbar-arrow-color: #ffffff;
   scrollbar-track-color: #131825;
+  background-color: #FBF2FF;
+  height: 15000px;
 }
+@keyframes moveToPosition {
+  from {
+      top: 200px;
+      left: 200px;
+  }
+  to {
+      top: var(--final-top);
+      left: var(--final-left);
+  }
+}
+
+.animate-move {
+  position: absolute;
+  animation: moveToPosition 1.5s ease-out forwards;
+}
+
+.absolute.top-\[-200px\] { --final-top: -80px; }
+.absolute.left-\[320px\] { --final-left: 320px; }
+
+.absolute.top-\[100px\] { --final-top: 100px; }
+.absolute.left-\[500px\] { --final-left: 500px; }
+
+.absolute.top-\[220px\] { --final-top: 220px; }
+.absolute.left-\[-60px\] { --final-left: -60px; }
+
+.absolute.top-\[330px\] { --final-top: 330px; }
+.absolute.left-\[450px\] { --final-left: 450px; }
+
+.absolute.top-\[70px\] { --final-top: 70px; }
+.absolute.left-\[-130px\] { --final-left: -130px; }
+

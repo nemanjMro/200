@@ -19,8 +19,9 @@ const Login = () => {
               variant="outline"
               size="sm"
               onClick={() => signIn()}
+              className='bg-[#9D3FF6]'
             >
-              <Link className="bg-primary text-primary-foreground border-none" href="/login">
+              <Link className="text-primary-foreground border-none" href="/login">
                 Sign In
               </Link>
             </Button>

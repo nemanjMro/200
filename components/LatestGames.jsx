@@ -37,7 +37,7 @@ export const LatestGames = ({ games }) => {
   }, [games]);
 
   return (
-    <main className="text-white bg-[#131419] w-full flex flex-col justify-center items-center p-10">
+    <main className="text-white bg-[#FBF2FF] w-full flex flex-col justify-center items-center p-10">
       <div className="pb-6">
         <h2 className="text-xl md:text-4xl font-semibold text-center">
           Latest Games

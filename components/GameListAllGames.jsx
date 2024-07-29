@@ -86,7 +86,7 @@ export const GameListAllGames = ({ data }) => {
 
   return (
     <>
-      <div className="flex flex-col items-center w-full md:w-3/5 h-auto rounded-2xl bg-[#131419] p-10">
+      <div className="flex flex-col items-center w-full md:w-3/5 h-auto rounded-2xl bg-[#FBF2FF] p-10">
         <div className="w-full md:w-3/5 pb-10 grid md:grid-cols-3 grid-cols-1 gap-3">
           {categories.map((category) => (
             <Button
@@ -95,7 +95,7 @@ export const GameListAllGames = ({ data }) => {
               className={`border-spacing-1 ${
                 selectedCategory === category.id
                   ? "bg-[#5865F2]"
-                  : "bg-[#131419]"
+                  : "bg-[#FBF2FF]"
               } border border-[#5865F2] hover:bg-[#5865F2]`}
             >
               {category.name}

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Login() {
   return (
-    // <main className="flex w-full h-screen bg-[#131419] via-[#5865F2] ">
+    // <main className="flex w-full h-screen bg-[#FBF2FF] via-[#5865F2] ">
     // <main className="flex w-full h-screen bg-gradient-to-r from-[#131419] via-[red] to-regal-blue  ">
     <main className="flex flex-col md:flex-row w-full h-screen">
       <div className=" w-full md:w-1/3 h-1/2 md:h-full flex justify-center items-center  bg-gradient-to-r from-[#5865F2] to-[#131419] ">

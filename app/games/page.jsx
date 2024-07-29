@@ -33,7 +33,7 @@ export default async function Games(props) {
   };
 
   return (
-    <div className=" flex flex-col items-center justify-center w-full h-auto bg-[#131419] md:px-0 px-2">
+    <div className=" flex flex-col items-center justify-center w-full h-auto bg-[#FBF2FF] md:px-0 px-2">
       <LandingGamesPage text={text} />
       <GameListAllGames data={data} />
     </div>
