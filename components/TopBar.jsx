@@ -53,39 +53,39 @@ const TopBar = () => {
             className="hidden lg:flex md:flex space-x-8 text-xl justify-around"
             aria-label="main"
           >
-            <div className="flex justify-evenly w-4/6">
-              <Link href="/#Bonuses" className=" text-white">
+            <div className="flex justify-evenly w-4/6 text-[#2B0054]">
+              <Link href="/#Bonuses" className="">
                 <span className="transition-colors hover:text-[#5865F2]">
                   About Us
                 </span>
               </Link>
-              <Link href="/games" className="hover:opacity-90 text-white">
+              <Link href="/games" className="hover:opacity-90">
                 <span className="transition-colors hover:text-[#5865F2]">
                   Casinos
                 </span>
               </Link>
-              {/* <Link href="/blog" className="hover:opacity-90 text-white"> */}
-              <Link href="/posts" className="hover:opacity-90 text-white">
+              {/* <Link href="/blog" className="hover:opacity-90"> */}
+              <Link href="/posts" className="hover:opacity-90">
                 <span className="transition-colors hover:text-[#5865F2]">
                   Bonuses
                 </span>
               </Link>
-              <Link href="/posts" className="hover:opacity-90 text-white">
+              <Link href="/posts" className="hover:opacity-90">
                 <span className="transition-colors hover:text-[#5865F2]">
                   Games
                 </span>
               </Link>
-              <Link href="/posts" className="hover:opacity-90 text-white">
+              <Link href="/posts" className="hover:opacity-90">
                 <span className="transition-colors hover:text-[#5865F2]">
                   News
                 </span>
               </Link>
-              <Link href="/posts" className="hover:opacity-90 text-white">
+              <Link href="/posts" className="hover:opacity-90">
                 <span className="transition-colors hover:text-[#5865F2]">
                   Guides & Tips
                 </span>
               </Link>
-              <Link href="/posts" className="hover:opacity-90 text-white">
+              <Link href="/posts" className="hover:opacity-90">
                 <span className="transition-colors hover:text-[#5865F2]">
                   Payments Methods
                 </span>

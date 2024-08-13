@@ -3,9 +3,9 @@ import React from 'react'
 
 function TrustUs() {
   return (
-    <div className='w-5/6 m-auto relative top-[100px]'>
-        <div className='w-5/6 h-[800px] border rounded-[50px] bg-[#FBF2FF] m-auto border-[#9D3FF6] p-16'>
-            <div className='text-center w-7/12 m-auto'>
+    <div className='2xl:w-5/6 m-auto relative top-[100px]'>
+        <div className='2xl:w-5/6 h-[800px] border rounded-[50px] bg-[#FBF2FF] m-auto border-[#9D3FF6] p-10 2xl:p-16'>
+            <div className='text-center 2xl:w-7/12 m-auto'>
                 <Image
                 src="/logo.svg"
                 alt="logo free casino games"

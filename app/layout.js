@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className=" text-white">
+    <html lang="en" className="text-[#2B0054]">
       <body className={`${poppins.variable} font-sans text-white bg-[#FBF2FF]`}>
         <AuthProvider>
           <nav className="flex flex-col items-center h-20 fixed left-0 top-0 z-20 w-full">
@@ -31,6 +31,7 @@ export default function RootLayout({ children }) {
           </div>
         </AuthProvider>
         {/* <Footer /> */}
+        <Footer/>
       </body>
     </html>
   );

@@ -4,11 +4,11 @@ import React from 'react'
 function HomeGames() {
   return (
     <div className='text-center'>
-        <div className='w-1/4 m-auto'>
+        <div className='2xl:w-1/4 m-auto'>
             <h2 className='text-[36px] font-semibold mb-5'>Games</h2>
             <p className='text-[17px] font-medium my-3'>Check out the best and most trusted names in the casino industry and give them your vote of confidence!</p>
         </div>
-        <div className='bg-[#5865F2] h-[3px] w-[70px] m-auto'></div>
+        <div className='bg-[#5865F2] h-[3px] w-3/6 2xl:w-[70px] m-auto'></div>
         <div className='h-[400px]'>
             
         </div>

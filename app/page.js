@@ -16,6 +16,8 @@ import HomeNoDepositBonus from "@/components/HomeNoDepositBonus";
 import HomeMostClaimed from "@/components/HomeMostClaimed";
 import HomeExclusiveNoDepositBonuses from "@/components/HomeExclusiveNoDepositBonuses";
 import { Button } from "@/components/ui/button";
+import HomeBonusBlog from "@/components/HomeBonusBlog";
+import HomeReqAndAdvice from "@/components/HomeReqAndAdvice";
 
 export default async function Home() {
   const text = {
@@ -67,13 +69,13 @@ We regularly refresh bonus offers from the leading online casinos, including gre
       <HomeLatest/>
       <HomeNoDepositBonus/>
       <HomeMostClaimed/>
-      <div className="mt-24 w-full h-[1600px] bg-[#2B0054] p-24 text-[#FFFFFF]">
-        <div className="whitespace-pre-line w-5/6 m-auto px-16">
+      <div className="mt-24 w-full 2xl:h-[1600px] bg-[#2B0054] p-5 2xl:p-24 text-[#FFFFFF]">
+        <div className="whitespace-pre-line 2xl:w-5/6 m-auto 2xl:px-16">
           <h2 className="text-[36px] font-semibold">Exclusive No Deposite Bonuses And Free Spins</h2>
           <p className="my-10 text-[17px]">{text.exclusiveText}</p>
         </div>
         <HomeExclusiveNoDepositBonuses/>
-        <div className="whitespace-pre-line w-5/6 m-auto px-16 mt-24">
+        <div className="whitespace-pre-line 2xl:w-5/6 m-auto 2xl:px-16 mt-24">
           <h2 className="text-[36px] font-semibold">Can You Win Real Money With No Deposit Bonuses?</h2>
           <p className="my-10 text-[17px]">{text.realMoneyText}</p>
           <Button className='mt-4 bg-[#9D3FF6] text-primary-foreground text-[14px] font-bold rounded-[5px] w-[200px] py-2 animeButton'>
@@ -81,6 +83,13 @@ We regularly refresh bonus offers from the leading online casinos, including gre
           </Button>
         </div>
       </div>
+      <HomeBonusBlog number={1}/>
+      <div className="mt-24 w-full bg-[#2B0054] p-10 2xl:p-24 text-[#FFFFFF]">
+        <HomeBonusBlog/>
+      </div>
+      <HomeReqAndAdvice number={1}/>
+      <HomeReqAndAdvice/>
+
    </div>
   );
 }

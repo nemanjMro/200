@@ -1,4 +1,5 @@
 import { Button } from '@headlessui/react'
+import Image from 'next/image'
 import React from 'react'
 
 function LatestCasino({casinos}) {
@@ -6,9 +7,14 @@ function LatestCasino({casinos}) {
     <>
     {
         casinos.map((casino, index)=>(
-            <div key={index} className='h-[440px] w-[302px] bg-white p-5 rounded-[10px]'>
+            <div key={index} className='h-[440px] w-[302px] mb-5 2xl:mb-0 bg-white p-5 rounded-[10px]'>
                 <div className='h-[150px] w-full bg-black rounded-[10px] mb-3'>
-
+                    <Image
+                        src={casino.imageUrl}
+                        alt=''
+                        width={500}
+                        height={150}
+                    />
                 </div>
                 <h3>{casino.title}</h3>
                 <p className='text-[24px] '><span className='text-[40px] block font-semibold relative top-[10px]'>{casino.freeSpins}</span> Free Spins</p>

@@ -6,7 +6,7 @@ function HomeEsclusiveNoDepositBonus({bonuses}) {
     <>
         {
             bonuses.map((bonus, index)=>(
-                <div key={index} className='bg-[#FFFFFF] w-[19%] rounded-[10px] pb-[20px]'>
+                <div key={index} className='bg-[#FFFFFF] my-3 2xl:w-[19%] rounded-[10px] pb-[20px]'>
                     <div className='h-[120px] bg-black rounded-t-[10px]'>
 
                     </div>
